@@ -1,0 +1,60 @@
+<nav class="navbar d-flex" id="app-navbar">
+    <div id="nav-elements">
+        <a href="#" class="navbar-brand">Craft Tees</a>
+        <div id="nav-actions">
+            <div class="nav-action-item">
+                <span class="text">Men</span>
+            </div>
+            <div class="nav-action-item">
+                <span class="text">Women</span>
+            </div>
+            <div class="nav-action-item">
+                <span class="text">Kids</span>
+            </div>
+        </div>
+        <div id="search-box">
+            <input class="form-control" type="text" placeholder="Search.." aria-label=".form-control-sm example">
+        </div>
+        <div id="profile-actions d-flex">
+            <div>
+                <button class="btn btn-outline-primary">Login</button>
+            </div>
+        </div>
+    </div>
+</nav>
+<main class="main">
+    <section id="hero-section" class="home-page-container">
+        <div id="hero-wrapper" class="row align-items-center">
+            <div id="left-block" class="col-md-5">
+                <h1>Grab your customised designer T-shirts at 60% offer</h1>
+            </div>
+            <div id="right-block" class="col-md-7">
+                <ngb-carousel>
+                    <ng-template ngbSlide>
+                        <div class="carousel-elements">
+                            <img src="../../assets/images/Hero-bg-1.webp" class="d-block img-thumbnail" alt="...">
+                        </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <div class="carousel-elements">
+                            <img src="../../assets/images/Hero-bg-2.jpg" class="d-block img-thumbnail" alt="...">
+                        </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <div class="carousel-elements">
+                            <img src="../../assets/images/Hero-bg-6.jpg" class="d-block img-thumbnail" alt="...">
+                        </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <div class="carousel-elements">
+                            <img src="../../assets/images/Hero-bg-4.jpg" class="d-block img-thumbnail" alt="...">
+                        </div>
+                    </ng-template>
+                </ngb-carousel>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="app-footer" class="w-100 bg-black p-2 d-flex align-items-center justify-content-center">
+    <p class="text-light m-0">&copy;&nbsp;crafttees.in</p>
+</footer>

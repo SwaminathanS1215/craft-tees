@@ -1,7 +1,7 @@
 #hero-section {
     width: 100%;
     padding: 1rem;
-    background-color: white;
+    background-color: #0f171b;
 }
 
 .carousel-elements {
@@ -12,7 +12,7 @@
 
 #left-block h1 {
     font-weight: bold;
-    background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
+    background: linear-gradient(to left, #ffffff 0%, #cfcfcf 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

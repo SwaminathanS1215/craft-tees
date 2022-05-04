@@ -1,3 +1,33 @@
 <div>
-    <app-home></app-home>
+    <nav class="navbar d-flex" id="app-navbar">
+        <div id="nav-elements">
+            <a href="#" class="navbar-brand">Craft Tees</a>
+            <div id="nav-actions">
+                <div class="nav-action-item">
+                    <span class="text">Men</span>
+                </div>
+                <div class="nav-action-item">
+                    <span class="text">Women</span>
+                </div>
+                <div class="nav-action-item">
+                    <span class="text">Kids</span>
+                </div>
+            </div>
+            <div id="search-box">
+                <input class="form-control" type="text" placeholder="Search.." aria-label=".form-control-sm example">
+            </div>
+            <div id="profile-actions d-flex">
+                <div>
+                    <button class="btn btn-outline-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="main">
+        <app-home></app-home>
+        <app-login [userData]="userData"></app-login>
+    </main>
+    <footer id="app-footer">
+        <p class="text-light m-0">&copy;&nbsp;crafttees.in</p>
+    </footer>
 </div>

@@ -55,9 +55,10 @@
     margin-top: 4rem;
 }
 
-input:focus {
+input:focus, button:focus, .btn:focus {
     outline: none !important;
     box-shadow: none !important;
+
 }
 
 .home-page-container .carousel-control-prev-icon {

@@ -1,36 +1,60 @@
-<div class="login-container">
-    <div class="form-wrapper">
-        <div class="form-wrapper-item row h-100" id="login-form-wrapper">
-            <div class="col-md-7 left--block">
-                <h3>Looks like you already</h3>
-                <h3>had a deal with us!</h3>
+<nav class="navbar d-flex" id="app-navbar">
+    <div id="nav-elements">
+        <a [routerLink]="'/'" class="navbar-brand">Craft Tees</a>
+        <div id="nav-actions">
+            <div class="nav-action-item">
+                <span class="text">Men</span>
             </div>
-            <div class="col-md-5 right--block p-0">
-                <div class="w-100 h-100">
-                    <!--Shows alert if invalid username or password is entered -->
-                    <div class="alert alert-danger d-flex align-items-center m-0" role="alert" *ngIf="!isLoginValid">
-                        <div>
-                            Invalid Username or Password
+            <div class="nav-action-item">
+                <span class="text">Women</span>
+            </div>
+            <div class="nav-action-item">
+                <span class="text">Kids</span>
+            </div>
+        </div>
+        <div id="search-box">
+            <input class="form-control" type="text" placeholder="Search.." aria-label=".form-control-sm example">
+        </div>
+    </div>
+</nav>
+<main class="main">
+    <section class="login-container">
+        <div class="form-wrapper">
+            <div class="form-wrapper-item row h-100" id="login-form-wrapper">
+                <div class="col-md-7 left--block">
+                    <h3>Looks like you already</h3>
+                    <h3>had a deal with us!</h3>
+                </div>
+                <div class="col-md-5 right--block p-0">
+                    <div class="w-100 h-100">
+                        <!--Shows alert if invalid username or password is entered -->
+                        <div class="alert alert-danger d-flex align-items-center m-0" role="alert"
+                            *ngIf="!isLoginValid">
+                            <div>
+                                Invalid Username or Password
+                            </div>
                         </div>
+                        <form id="login-form" class="each-form h-100">
+                            <div class="mb-3">
+                                <label for="login-user-name" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="login-user-name" name="user-name"
+                                    [(ngModel)]="userName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="login-pwd" class="form-label">Password</label>
+                                <input type="password" class="form-control" name="password" id="login-pwd"
+                                    [(ngModel)]="password">
+                            </div>
+                            <button type="submit" class="btn btn-success w-100 mt-4 mb-5"
+                                (click)="doLogin()">Login</button>
+                            <button type="button" class="btn btn-link text-decoration-none text-light p-0" [routerLink]="'/register'">Not a user?
+                                Create
+                                an
+                                account</button>
+                        </form>
                     </div>
-                    <form id="login-form" class="each-form h-100">
-                        <div class="mb-3">
-                            <label for="login-user-name" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="login-user-name" name="user-name"
-                                [(ngModel)]="userName">
-                        </div>
-                        <div class="mb-3">
-                            <label for="login-pwd" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="login-pwd"
-                                [(ngModel)]="password">
-                        </div>
-                        <button type="submit" class="btn btn-success w-100 mt-4 mb-5" (click)="doLogin()">Login</button>
-                        <button type="button" class="btn btn-link text-decoration-none text-light p-0">Not a user? Create
-                            an
-                            account</button>
-                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+</main>

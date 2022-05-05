@@ -1,0 +1,48 @@
+#products-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 18rem;
+}
+
+.product-item {
+    height: 20rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.product-item:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+img.card-img-top {
+    width: 70%;
+}
+
+.card {
+    height: 100%;
+    width: 17rem;
+}
+
+#products-filter-wrapper {
+    display: flex;
+}
+
+#filter-block {
+    width: 18rem;
+    height: calc(100% - 4rem);
+    overflow-y: auto;
+    border-right: 3px solid lightgray;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+
+}
+
+.filter-item {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.filter-item label {
+    font-size: 0.8rem;
+}

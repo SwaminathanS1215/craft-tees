@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
         ];
     }
     ngOnInit(): void {
-
+        sessionStorage.setItem('users', JSON.stringify(this.userData));
     }
 
 }

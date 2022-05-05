@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { userDetails  } from '../app.component';
 
@@ -17,9 +18,10 @@ export class LoginComponent implements OnInit {
     isLoginValid = true;
     isLoggedIn = false;
 
-    constructor() { 
+    constructor(private router: Router) { 
         this.userName = '';
         this.password = '';
+        this.userData = JSON.parse(sessionStorage.getItem('users')!);
     }
 
     ngOnInit(): void {
@@ -36,6 +38,9 @@ export class LoginComponent implements OnInit {
         } else {
             this.isLoginValid = true;
             this.isLoggedIn = true;
+            setTimeout(() => {
+                this.router.navigateByUrl('/products');
+            }, 2000)
         }
     }
 

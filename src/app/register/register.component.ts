@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { userDetails } from '../app.component';
 
 @Component({
@@ -21,13 +21,15 @@ export class RegisterComponent implements OnInit {
     isPasswordsEqual = true;
     isUserExisted = false;
 
-    constructor() {
+    constructor(private router: Router) {
         // form data
         this.userName = '';
         this.password = '';
         this.email = '';
         this.confirmPassword = '';
         this.name = '';
+
+        this.userData = JSON.parse(sessionStorage.getItem('users')!);
     }
 
     ngOnInit(): void {
@@ -59,6 +61,10 @@ export class RegisterComponent implements OnInit {
         this.isRegistered = true;
         let newData: userDetails = { userName: this.userName, password: this.password, email: this.email, name: this.name };
         this.userData.push(newData);
+        sessionStorage.setItem('users', JSON.stringify(this.userData));
+        setTimeout(() => {
+            this.router.navigateByUrl('/login');
+        }, 4000)
     }
 
 }

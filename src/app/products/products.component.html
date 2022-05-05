@@ -1,0 +1,203 @@
+<nav class="navbar d-flex" id="app-navbar">
+    <div id="nav-elements">
+        <a [routerLink]="'/'" class="navbar-brand">Craft Tees</a>
+        <div id="nav-actions">
+            <div class="nav-action-item">
+                <span class="text">Men</span>
+            </div>
+            <div class="nav-action-item">
+                <span class="text">Women</span>
+            </div>
+            <div class="nav-action-item">
+                <span class="text">Kids</span>
+            </div>
+        </div>
+        <div id="search-box">
+            <input class="form-control" type="text" placeholder="Search T-Shirts.."
+                aria-label=".form-control-sm example">
+        </div>
+        <div id="profile-actions d-flex">
+            <fa-icon [icon]="icons.userCircle" class="fa-2x text-light" id="profile-icon"></fa-icon>
+        </div>
+    </div>
+</nav>
+<main class="main">
+    <section id="products-section">
+        <div id="products-filter-wrapper">
+            <div id="filter-block">
+                <div id="gender-filer" class="filter-item">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="male" checked>
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="female">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="female">
+                        <label class="form-check-label" for="inlineRadio2">Boys</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="female">
+                        <label class="form-check-label" for="inlineRadio2">Girls</label>
+                    </div>
+                </div>
+                <div id="cost-filter" class="filter-item">
+                    <p class="fw-bold m-0">Price</p>
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" value="Rs. 149 to Rs. 1987"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Rs. 149 to Rs. 1987
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Rs. 1987 to Rs. 3825"
+                            id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Rs. 1987 to Rs. 3825
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Rs. 3825 to Rs. 5663"
+                            id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Rs. 3825 to Rs. 5663
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Rs. 5663 to Rs. 7501"
+                            id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Rs. 5663 to Rs. 7501
+                        </label>
+                    </div>
+                </div>
+                <div id="size-filter" class="filter-item">
+                    <p class="fw-bold m-0">Size</p>
+                    <div class="form-check form-check-inline mt-2">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">S</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">M</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">L</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">XL</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">XXL</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">XXXL</label>
+                    </div>
+                </div>
+            </div>
+            <div id="products-wrapper">
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed blue Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed white Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed black Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed body builder Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed denim white builder Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-6.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed grey cotton Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-7.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed red and black Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-8.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed yellow Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-9.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed full sleeve Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card">
+                        <img src="../../assets/images/Product-10.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Printed designer Tshirt</h5>
+                            <p class="card-text">₹ 500.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

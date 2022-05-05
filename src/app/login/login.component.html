@@ -45,8 +45,15 @@
                                 <input type="password" class="form-control" name="password" id="login-pwd"
                                     [(ngModel)]="password">
                             </div>
-                            <button type="submit" class="btn btn-success w-100 mt-4 mb-5"
+                            <div *ngIf="!isLoggedIn">
+                                <button type="submit" class="btn btn-success w-100 mt-4 mb-5"
                                 (click)="doLogin()">Login</button>
+                            </div>
+                            <div *ngIf="isLoggedIn">
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                  </div>
+                            </div>
                             <button type="button" class="btn btn-link text-decoration-none text-light p-0" [routerLink]="'/register'">Not a user?
                                 Create
                                 an

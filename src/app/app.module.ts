@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FilterProductPipe } from './utils/pipes/filter-product.pipe';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    ProductsComponent
+    ProductsComponent,
+    FilterProductPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

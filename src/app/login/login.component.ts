@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { userDetails  } from '../app.component';
+import { userDetails } from '../app.component';
 
+// Login class
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
@@ -15,10 +16,12 @@ export class LoginComponent implements OnInit {
     userName: string;
     password: string;
 
+    loggedInUser!: userDetails[];
+
     isLoginValid = true;
     isLoggedIn = false;
 
-    constructor(private router: Router) { 
+    constructor(private router: Router) {
         this.userName = '';
         this.password = '';
         this.userData = JSON.parse(sessionStorage.getItem('users')!);
@@ -38,9 +41,11 @@ export class LoginComponent implements OnInit {
         } else {
             this.isLoginValid = true;
             this.isLoggedIn = true;
-            setTimeout(() => {
-                this.router.navigateByUrl('/products');
-            }, 2000)
+            this.loggedInUser = this.userData.filter(user => {
+                return user.userName === this.userName;
+            });
+            sessionStorage.setItem('loggedInUser', JSON.stringify(this.loggedInUser));
+            this.router.navigateByUrl('/products');
         }
     }
 

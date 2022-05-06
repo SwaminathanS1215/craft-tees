@@ -62,9 +62,7 @@ export class RegisterComponent implements OnInit {
         let newData: userDetails = { userName: this.userName, password: this.password, email: this.email, name: this.name };
         this.userData.push(newData);
         sessionStorage.setItem('users', JSON.stringify(this.userData));
-        setTimeout(() => {
-            this.router.navigateByUrl('/login');
-        }, 4000)
+        this.router.navigateByUrl('/login');
     }
 
 }

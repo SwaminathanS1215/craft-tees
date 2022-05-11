@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterProductPipe } from './utils/pipes/filter-product.pipe';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FilterProductPipe } from './utils/pipes/filter-product.pipe';
     RegisterComponent,
     LoginComponent,
     ProductsComponent,
-    FilterProductPipe
+    FilterProductPipe,
+    CartComponent
   ],
   imports: [
     BrowserModule,

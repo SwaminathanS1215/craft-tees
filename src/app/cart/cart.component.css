@@ -1,0 +1,76 @@
+#cart-section {
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+#cart-header {
+  text-transform: uppercase;
+  color: orange;
+}
+
+.each-cart-item {
+  flex-direction: row !important;
+  background-image: linear-gradient(45deg, #030a31, #033359);
+  border: 0;
+  padding: 0.5rem;
+}
+
+.each-cart-item img {
+  width: 70%;
+}
+
+.card-body.item-details {
+  padding: 1rem 0 0 0 ;
+}
+
+.p-card-prod-name {
+  font-size: 0.9rem;
+  color: #a7a7a7;
+  margin-bottom: 0;
+}
+
+.p-card-prod-cost {
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+#details-wrapper {
+  border-bottom: 1px solid gray;
+}
+
+#action-wrapper {
+  margin-top: 0.7rem;
+}
+
+.btn-remove-cart-item {
+  font-size: 0.7rem;
+  background: linear-gradient(45deg, #df7959, #f26f65);
+  color: white;
+  border: 0;
+}
+
+.btn-remove-cart-item:hover {
+  background: linear-gradient(45deg, #d65127, #e6291b);
+}
+
+#empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#empty-cart img {
+  width: 15rem;
+}
+
+#btn-explore-tshirts {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  background: linear-gradient(45deg, #ff5722, #e91e63);
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1rem 2rem;
+}

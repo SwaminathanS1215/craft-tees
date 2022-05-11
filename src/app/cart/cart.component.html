@@ -1,0 +1,83 @@
+<nav class="navbar d-flex" id="app-navbar">
+  <div id="nav-elements">
+    <a [routerLink]="'/'" class="navbar-brand">Craft Tees</a>
+    <div id="nav-actions">
+      <div class="nav-action-item">
+        <span class="text">Men</span>
+      </div>
+      <div class="nav-action-item">
+        <span class="text">Women</span>
+      </div>
+      <div class="nav-action-item">
+        <span class="text">Kids</span>
+      </div>
+    </div>
+    <div id="profile-actions" class="d-flex align-items-center">
+      <p class="m-0 me-1 text-light">{{loggedInUser.name}}</p>
+      <div ngbDropdown display="dynamic" class="d-inline-block">
+        <button class="btn dropdown-toggle p-0" type="button" id="profile-menu" data-bs-toggle="dropdown"
+          aria-expanded="false" ngbDropdownToggle>
+          <fa-icon [icon]="icons.userCircle" class="fa-2x text-light" id="profile-icon"></fa-icon>
+        </button>
+        <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="profile-menu">
+          <li ngbDropdownItem><a class="dropdown-item" href="#">My Profile</a></li>
+          <li ngbDropdownItem><a class="dropdown-item" href="#" (click)="doLogout()">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="main">
+  <section id="cart-section">
+    <div class="cart-container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item text-primary"><a class="text-decoration-none" [routerLink]="'/'">Home</a></li>
+          <li class="breadcrumb-item text-primary"><a class="text-decoration-none"
+              [routerLink]="'/products'">T-Shirts</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Cart</li>
+        </ol>
+      </nav>
+      <!-- <h2 id="cart-header">Manage Cart</h2> -->
+      <div class="row" id="cart-items-wrapper" *ngIf="cartItems.length > 0; else emptyCartTemplate">
+        <div class="col-md-8 p-4 pt-2">
+          <div class="each-cart-item row card mb-2" *ngFor="let item of cartItems;">
+            <div class="col-md-3 p-0">
+              <img src={{item.product.images[0]}} alt={{item.product.id}} />
+            </div>
+            <div class="col-md-9 card-body item-details">
+              <div id="details-wrapper">
+                <h6 class="card-title mb-1 fw-bold text-light">{{item.product.productBrand}}</h6>
+                <p class="p-card-prod-name">{{item.product.productName}}</p>
+                <p class="p-card-prod-size mb-2">
+                  <span class="fw-bold text-light">Size&nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                  <span class="text-primary fw-bold">{{item.size}}</span>
+                </p>
+                <h6 class="p-card-prod-cost">{{item.product.cost | currency : 'INR'}}</h6>
+              </div>
+              <div id="action-wrapper">
+                <button class="btn btn-remove-cart-item">
+                  <fa-icon [icon]="icons.delete" class="fa-1x text-light"></fa-icon>
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div id="price-block">
+
+          </div>
+        </div>
+      </div>
+      <ng-template #emptyCartTemplate>
+        <div id="empty-cart">
+          <img src="../../assets/images/empty-cart.png" alt="Empty Cart"/>
+          <button class="btn" id="btn-explore-tshirts" [routerLink]="'/products'">
+            Explore T-Shirts
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </section>
+</main>

@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "productId": "USPA-ITEM-1",
+      "id": "USPA-ITEM-1",
       "productName": "USPA Striped White T-Shirt",
       "productBrand": "USPA",
       "color": "White",
@@ -10,8 +10,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "gender": "M",
       "cost": 750,
@@ -23,7 +23,7 @@
       "reviews": 300
     },
     {
-      "productId": "MODA-ITEM-1",
+      "id": "MODA-ITEM-1",
       "productName": "MODA Printed Violet T-Shirt",
       "productBrand": "MODA",
       "color": "Violet",
@@ -32,8 +32,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1050,
       "gender": "M",
@@ -45,7 +45,7 @@
       "reviews": 300
     },
     {
-      "productId": "MODA-ITEM-2",
+      "id": "MODA-ITEM-2",
       "productName": "MODA Printed White T-Shirt",
       "productBrand": "MODA",
       "color": "White",
@@ -54,8 +54,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 800,
       "gender": "M",
@@ -67,7 +67,7 @@
       "reviews": 300
     },
     {
-      "productId": "MODA-ITEM-3",
+      "id": "MODA-ITEM-3",
       "productName": "MODA Printed Yellow T-Shirt",
       "productBrand": "MODA",
       "color": "Yellow",
@@ -76,21 +76,21 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 750,
       "gender": "M",
       "images": [
         "../../assets/images/MODA/ITEM-3/Item-3-1.jpg",
-        "../../assets/images/MODA/ITEM-3/Item-3-2.jpg"
+        "../../assets/images/MODA/ITEM-3/Item-3-2.webp"
       ],
       "rating": "4.5",
       "reviews": 300
     },
     {
-      "productId": "HERE&NOW-ITEM-1",
-      "productName": "HERE&NOW Printed Red T-Shirt",
+      "id": "HERE&NOW-ITEM-1",
+      "productName": "Her&Now Printed Red T-Shirt",
       "productBrand": "HERE&NOW",
       "color": "Red",
       "sizes": [
@@ -98,8 +98,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1400,
       "gender": "M",
@@ -111,8 +111,8 @@
       "reviews": 300
     },
     {
-      "productId": "HERE&NOW-ITEM-2",
-      "productName": "HERE&NOW Printed Blue T-Shirt",
+      "id": "HERE&NOW-ITEM-2",
+      "productName": "Her&Now Printed Blue T-Shirt",
       "productBrand": "HERE&NOW",
       "color": "Blue",
       "sizes": [
@@ -120,21 +120,21 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1500,
       "gender": "M",
       "images": [
         "../../assets/images/HERE&NOW/ITEM-2/Item-2-1.webp",
-        "../../assets/images/HERE&NOW/ITEM-2/Item-2-2.webp"
+        "../../assets/images/HERE&NOW/ITEM-2/Item-2-2.jpg"
       ],
       "rating": "4.5",
       "reviews": 300
     },
     {
-      "productId": "FREE-AUTHORITY-ITEM-1",
-      "productName": "FREE AUTHORITY PUBG Printed Black T-Shirt",
+      "id": "FREE-AUTHORITY-ITEM-1",
+      "productName": "Free Authority PUBG Printed Black T-Shirt",
       "productBrand": "FREE AUTHORITY",
       "color": "Black",
       "sizes": [
@@ -142,8 +142,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 750,
       "gender": "M",
@@ -155,8 +155,8 @@
       "reviews": 300
     },
     {
-      "productId": "FREE-AUTHORITY-ITEM-2",
-      "productName": "FREE AUTHORITY Spider Printed Black T-Shirt",
+      "id": "FREE-AUTHORITY-ITEM-2",
+      "productName": "Free Authority Spider Printed Black T-Shirt",
       "productBrand": "FREE AUTHORITY",
       "color": "Black",
       "sizes": [
@@ -164,8 +164,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 750,
       "gender": "M",
@@ -177,8 +177,8 @@
       "reviews": 300
     },
     {
-      "productId": "FREE-AUTHORITY-ITEM-3",
-      "productName": "FREE AUTHORITY Avengers Printed Black T-Shirt",
+      "id": "FREE-AUTHORITY-ITEM-3",
+      "productName": "Free Authority Avengers Printed Black T-Shirt",
       "productBrand": "FREE AUTHORITY",
       "color": "Black",
       "sizes": [
@@ -186,8 +186,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 750,
       "gender": "M",
@@ -199,7 +199,7 @@
       "reviews": 300
     },
     {
-      "productId": "DILLINGER-ITEM-1",
+      "id": "DILLINGER-ITEM-1",
       "productName": "DILLINGER Printed Love Multi-color T-Shirt",
       "productBrand": "DILLINGER",
       "color": "Multi-color",
@@ -208,8 +208,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1200,
       "gender": "F",
@@ -221,7 +221,7 @@
       "reviews": 300
     },
     {
-      "productId": "H&M-ITEM-1",
+      "id": "H&M-ITEM-1",
       "productName": "H&M Printed Rose T-Shirt",
       "productBrand": "H&M",
       "color": "Rose",
@@ -230,8 +230,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 750,
       "gender": "F",
@@ -243,7 +243,7 @@
       "reviews": 300
     },
     {
-      "productId": "ROADSTER-ITEM-1",
+      "id": "ROADSTER-ITEM-1",
       "productName": "ROADSTER Printed Green T-Shirt",
       "productBrand": "ROADSTER",
       "color": "Green",
@@ -252,8 +252,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1200,
       "gender": "F",
@@ -265,8 +265,8 @@
       "reviews": 300
     },
     {
-      "productId": "MAST&HARBOUR-ITEM-1",
-      "productName": "MAST&HARBOUR Printed White T-Shirt",
+      "id": "MAST&HARBOUR-ITEM-1",
+      "productName": "Mast&Harbour Printed White T-Shirt",
       "productBrand": "MAST&HARBOUR",
       "color": "White",
       "sizes": [
@@ -274,8 +274,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "F",
@@ -287,8 +287,8 @@
       "reviews": 300
     },
     {
-      "productId": "FLYING_MACHINE-ITEM-1",
-      "productName": "FLYING MACHINE Printed White T-Shirt",
+      "id": "FLYING_MACHINE-ITEM-1",
+      "productName": "Flying Machine Printed White T-Shirt",
       "productBrand": "FLYING_MACHINE",
       "color": "White",
       "sizes": [
@@ -296,8 +296,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 750,
       "gender": "M",
@@ -309,8 +309,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-3",
-      "productName": "CRAFT TEES Printed White T-Shirt",
+      "id": "CRAFT_TEES-ITEM-3",
+      "productName": "Craft Tees Printed White T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "White",
       "sizes": [
@@ -318,8 +318,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 700,
       "gender": "M",
@@ -330,8 +330,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-4",
-      "productName": "CRAFT TEES Printed Black T-Shirt",
+      "id": "CRAFT_TEES-ITEM-4",
+      "productName": "Craft Tees Printed Black T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "Black",
       "sizes": [
@@ -339,8 +339,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "M",
@@ -351,8 +351,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-6",
-      "productName": "CRAFT TEES Printed Black T-Shirt",
+      "id": "CRAFT_TEES-ITEM-6",
+      "productName": "Craft Tees Printed Black T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "Black",
       "sizes": [
@@ -360,8 +360,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "M",
@@ -372,8 +372,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-8",
-      "productName": "CRAFT TEES Printed Blue T-Shirt",
+      "id": "CRAFT_TEES-ITEM-8",
+      "productName": "Craft Tees Printed Blue T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "Blue",
       "sizes": [
@@ -381,8 +381,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "M",
@@ -393,8 +393,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-9",
-      "productName": "CRAFT TEES Printed White T-Shirt",
+      "id": "CRAFT_TEES-ITEM-9",
+      "productName": "Craft Tees Printed White T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "White",
       "sizes": [
@@ -402,8 +402,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "M",
@@ -414,8 +414,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-10",
-      "productName": "CRAFT TEES Printed Black T-Shirt",
+      "id": "CRAFT_TEES-ITEM-10",
+      "productName": "Craft Tees Printed Black T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "Black",
       "sizes": [
@@ -423,8 +423,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "M",
@@ -435,8 +435,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-11",
-      "productName": "CRAFT TEES Printed Body Builder Black T-Shirt",
+      "id": "CRAFT_TEES-ITEM-11",
+      "productName": "Craft Tees Printed Body Builder Black T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "Black",
       "sizes": [
@@ -444,8 +444,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "M",
@@ -456,8 +456,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-12",
-      "productName": "CRAFT TEES Printed White T-Shirt",
+      "id": "CRAFT_TEES-ITEM-12",
+      "productName": "Craft Tees Printed White T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "White",
       "sizes": [
@@ -465,8 +465,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "M",
@@ -477,8 +477,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-13",
-      "productName": "CRAFT TEES Printed Grey T-Shirt",
+      "id": "CRAFT_TEES-ITEM-13",
+      "productName": "Craft Tees Printed Grey T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "Grey",
       "sizes": [
@@ -486,8 +486,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "M",
@@ -498,8 +498,8 @@
       "reviews": 300
     },
     {
-      "productId": "CRAFT_TEES-ITEM-14",
-      "productName": "CRAFT TEES Printed Red T-Shirt",
+      "id": "CRAFT_TEES-ITEM-14",
+      "productName": "Craft Tees Printed Red T-Shirt",
       "productBrand": "CRAFT TEES",
       "color": "Red",
       "sizes": [
@@ -507,8 +507,8 @@
         "M",
         "L",
         "XL",
-        "XXL",
-        "XXXL"
+        "2XL",
+        "3XL"
       ],
       "cost": 1000,
       "gender": "M",
@@ -518,5 +518,64 @@
       "rating": "4.5",
       "reviews": 300
     }
-  ]
+  ],
+  "users": [
+    {
+      "id": "swaminathan",
+      "userName": "swaminathan",
+      "password": "Swami7798",
+      "email": "swami7798@gmail.com",
+      "name": "Swaminathan"
+    },
+    {
+      "id": "rahul",
+      "userName": "rahul",
+      "password": "Rahul7798",
+      "email": "rahul7798@gmail.com",
+      "name": "Rahul"
+    },
+    {
+      "id": "prasanth",
+      "userName": "prasanth",
+      "password": "Prasanth7798",
+      "email": "prasanth798@gmail.com",
+      "name": "Prasanth"
+    },
+    {
+      "id": "mukesh",
+      "userName": "mukesh",
+      "password": "Mukesh7798",
+      "email": "mukesh7798@gmail.com",
+      "name": "Mukesh"
+    },
+    {
+      "id": "ravi",
+      "userName": "ravi",
+      "password": "Ravi7798",
+      "email": "ravi7798@gmail.com",
+      "name": "Ravi"
+    },
+    {
+      "id": "ramesh",
+      "userName": "ramesh",
+      "password": "Ramesh7798",
+      "email": "ramesh7798@gmail.com",
+      "name": "Ramesh"
+    },
+    {
+      "id": "dinesh",
+      "userName": "dinesh",
+      "password": "Dinesh7798",
+      "email": "dinesh7798@gmail.com",
+      "name": "Dinesh"
+    },
+    {
+      "id": "murali",
+      "userName": "murali",
+      "password": "murali7798",
+      "email": "murali7798@gmail.com",
+      "name": "Muralidharan"
+    }
+  ],
+  "cart": []
 }

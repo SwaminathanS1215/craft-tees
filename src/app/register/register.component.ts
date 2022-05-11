@@ -1,68 +1,77 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { userDetails } from '../app.component';
+import { User, UsersService } from '../utils/service/users.service';
 
 @Component({
-    selector: 'app-register',
-    templateUrl: './register.component.html',
-    styleUrls: ['./register.component.css', '../app.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css', '../app.component.css']
 })
 export class RegisterComponent implements OnInit {
-    @Input() userData: Array<userDetails> = [];
 
-    userName: string;
-    password: string;
-    email: string;
-    name: string;
-    confirmPassword: string;
+  // class attributes
+  userName: string;
+  password: string;
+  email: string;
+  name: string;
+  confirmPassword: string;
 
-    isRegisterValid = true;
-    isRegistered = false;
-    isPasswordsEqual = true;
-    isUserExisted = false;
+  isRegisterValid = true;
+  isRegistered = false;
+  isPasswordsEqual = true;
+  isUserExisted = false;
 
-    constructor(private router: Router) {
-        // form data
-        this.userName = '';
-        this.password = '';
-        this.email = '';
-        this.confirmPassword = '';
-        this.name = '';
+  constructor(private router: Router, private userService: UsersService) {
+    // form data
+    this.userName = '';
+    this.password = '';
+    this.email = '';
+    this.confirmPassword = '';
+    this.name = '';
+  }
 
-        this.userData = JSON.parse(sessionStorage.getItem('users')!);
-    }
+  ngOnInit(): void {
+  }
 
-    ngOnInit(): void {
-    }
-
-    checkUserExistance() {
-        // Filter function to check user existed already
-        const isUserAvaialable = this.userData.filter(user => {
-            return user.userName === this.userName
-        });
-
-        if (isUserAvaialable.length === 0) {
-            this.isUserExisted = false;
+  // function to check user existed already with the help of User Service
+  checkUserExistance() {
+    this.userService.getUser(this.userName).subscribe({
+      next: (user: User) => {
+        if (user) {
+          this.isUserExisted = false;
         } else {
-            this.isUserExisted = true;
-        }
-    }
+          this.isUserExisted = true;
 
-    // checks whether the password and confirm passwords are equal
-    checkPasswordAndConfirmPassword() {
-        if (this.password === this.confirmPassword) {
-            this.isPasswordsEqual = true;
-        } else {
-            this.isPasswordsEqual = false
         }
-    }
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    })
+  }
 
-    doRegister() {
+  // checks whether the password and confirm passwords are equal
+  checkPasswordAndConfirmPassword() {
+    if (this.password === this.confirmPassword) {
+      this.isPasswordsEqual = true;
+    } else {
+      this.isPasswordsEqual = false
+    }
+  }
+
+  doRegister() {
+    let newData: User = { id: this.userName, userName: this.userName, password: this.password, email: this.email, name: this.name };
+
+    // User service register function to create new user
+    this.userService.register(newData).subscribe({
+      next: (user: User) => {
         this.isRegistered = true;
-        let newData: userDetails = { userName: this.userName, password: this.password, email: this.email, name: this.name };
-        this.userData.push(newData);
-        sessionStorage.setItem('users', JSON.stringify(this.userData));
         this.router.navigateByUrl('/login');
-    }
+      },
+      error: (err) => {
+
+      }
+    })
+  }
 
 }

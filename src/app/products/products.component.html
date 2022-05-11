@@ -24,12 +24,18 @@
           <li ngbDropdownItem><a class="dropdown-item" href="#" (click)="doLogout()">Logout</a></li>
         </ul>
       </div>
+      <div class="ms-2 me-2">
+        <button type="button" class="btn" [routerLink]="'/cart'" id="btn-cart-display">
+          <fa-icon [icon]="icons.cartShopping" class="fa-1x text-light" id="cart-icon"></fa-icon>
+          <span *ngIf="itemsInCart.length > 0" class="badge bg-secondary ms-2">{{itemsInCart.length}}</span>
+        </button>
+      </div>
     </div>
   </div>
 </nav>
 <main class="main">
   <section id="products-section">
-    <div id="products-filter-wrapper">
+    <div id="products-filter-wrapper" *ngIf="showAllProducts; else expandProduct">
       <div id="filter-block">
         <div class="p-2 ">
           <h5 class="fw-bold">Filters</h5>
@@ -44,11 +50,13 @@
         </div>
         <div id="gender-filer" class="filter-item">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="male" [(ngModel)]="filterByMale">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="male"
+              [(ngModel)]="filterByMale">
             <label class="form-check-label" for="inlineRadio1">Male</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="female" [(ngModel)]="filterByFemale">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="female"
+              [(ngModel)]="filterByFemale">
             <label class="form-check-label" for="inlineRadio2">Female</label>
           </div>
           <div class="form-check form-check-inline">
@@ -116,8 +124,9 @@
         </div>
       </div>
       <div id="products-wrapper" class="row">
-        <div class="product-item col-md-3" *ngFor="let product of productsData | filterProduct : filterByMale : filterByFemale">
-          <div class="card product-card">
+        <div class="product-item col-md-3"
+          *ngFor="let product of productsData | filterProduct : filterByMale : filterByFemale">
+          <div class="card product-card" (click)="showParticularProduct(false, product)">
             <img src={{product.images[0]}} class="card-img-top" alt="...">
             <div class="card-body prod-details">
               <h5 class="card-title prod-brand">{{product.productBrand}}</h5>
@@ -128,5 +137,64 @@
         </div>
       </div>
     </div>
+    <ng-template #expandProduct>
+      <div id="expand-product-block" class="p-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item text-primary"><a
+                (click)="showParticularProduct(true, activeProduct)">T-Shirts</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{activeProduct.productBrand}}</li>
+            <li class="breadcrumb-item active" aria-current="page">{{activeProduct.productName}}</li>
+          </ol>
+        </nav>
+        <div id="product-block">
+          <div class="row">
+            <div class="col-md-3 pe-0" *ngFor="let img of activeProduct.images">
+              <img src={{img}} class="d-block expand-product-img" alt={{activeProduct.id}}>
+            </div>
+            <div class="col-md-6 p-4 pe-0 pt-0" id="expand-product-details">
+              <div id="viewer-product-brand">
+                <h2 class="mb-2">{{activeProduct.productBrand}}</h2>
+              </div>
+              <div id="viewer-product-name">
+                <h3>{{activeProduct.productName}}</h3>
+              </div>
+              <div id="viewer-rating-review">
+                <div class="product-rating">
+                  <span class="fw-bold">{{activeProduct.rating}}</span>&nbsp;
+                  <fa-icon [icon]="icons.star" class="text-success icons"></fa-icon>
+                </div>
+                <div class="product-review">
+                  <span class="text-secondary">{{activeProduct.reviews}} Ratings</span>
+                </div>
+              </div>
+              <hr>
+              <div id="viewer-product-price">
+                <h4 class="fw-bold">{{activeProduct.cost | currency : 'INR'}}</h4>
+              </div>
+              <div id="viewer-product-sizes">
+                <h4>Size</h4>
+                <div class="sizes-wrapper mt-1">
+                  <div class="product-size" *ngFor="let size of activeProduct.sizes"
+                    [ngClass]="selectedSize == size ? 'active' : ''" (click)="onSizeChange(size)">
+                    <p class="m-0">{{size}}</p>
+                  </div>
+                </div>
+              </div>
+              <div id="add-to-bag-block" class="mt-4">
+                <button class="btn" id="add-tocart-btn" (click)="addToCart()">
+                  <fa-icon [icon]="icons.cartPlus" class="icons"></fa-icon>&nbsp;&nbsp;
+                  Add to Cart
+                </button>
+              </div>
+              <p class="text-success mt-3" *ngIf="addedToCart">
+                Added to cart successfully&nbsp;&nbsp;
+                <fa-icon [icon]="icons.check" class="icons"></fa-icon>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
   </section>
 </main>

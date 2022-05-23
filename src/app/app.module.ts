@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { ProductsComponent } from './products/products.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterProductPipe } from './utils/pipes/filter-product.pipe';
 import { CartComponent } from './cart/cart.component';
+import { ProductViewerComponent } from './product-viewer/product-viewer.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { CartComponent } from './cart/cart.component';
     LoginComponent,
     ProductsComponent,
     FilterProductPipe,
-    CartComponent
+    CartComponent,
+    ProductViewerComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import { CartComponent } from './cart/cart.component';
     NgbModule,
     FormsModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

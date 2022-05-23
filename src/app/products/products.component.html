@@ -126,7 +126,7 @@
       <div id="products-wrapper" class="row">
         <div class="product-item col-md-3"
           *ngFor="let product of productsData | filterProduct : filterByMale : filterByFemale">
-          <div class="card product-card" (click)="showParticularProduct(false, product)">
+          <div class="card product-card" (click)="showParticularProduct(false, product)" [@EnterLeave]>
             <img src={{product.images[0]}} class="card-img-top" alt="...">
             <div class="card-body prod-details">
               <h5 class="card-title prod-brand">{{product.productBrand}}</h5>

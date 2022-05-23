@@ -12,11 +12,24 @@ import { CartItem } from '../cart/cart.component';
 import { ProductsService } from '../utils/service/products.service';
 // Product Interface
 import { Products } from './Products';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css', '../app.component.css']
+  styleUrls: ['./products.component.css', '../app.component.css'],
+  animations: [
+    trigger('EnterLeave', [
+      transition(':enter', [
+        style({ transform: 'scale(0)' }),
+        animate('1s')
+      ]),
+      transition(':leave', [
+        style({ transform: 'scale(1)' }),
+        animate('1s')
+      ])
+    ])
+  ]
 })
 export class ProductsComponent implements OnInit {
 

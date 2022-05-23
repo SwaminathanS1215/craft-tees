@@ -577,5 +577,19 @@
       "name": "Muralidharan"
     }
   ],
-  "cart": []
+  "cart": [],
+  "bestBuys":[
+    "../../assets/images/home/Item-1.webp",
+    "../../assets/images/home/Item-2.webp",
+    "../../assets/images/home/Item-3.webp",
+    "../../assets/images/home/Item-4.webp",
+    "../../assets/images/home/Item-5.webp",
+    "../../assets/images/home/Item-6.webp",
+    "../../assets/images/home/Item-7.webp",
+    "../../assets/images/home/Item-8.webp",
+    "../../assets/images/home/Item-9.webp",
+    "../../assets/images/home/Item-10.webp",
+    "../../assets/images/home/Item-11.webp",
+    "../../assets/images/home/Item-12.webp"
+  ]
 }

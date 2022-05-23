@@ -51,4 +51,12 @@
             </div>
         </div>
     </section>
+    <section id="best-buys-section">
+      <h1 id="best-buys-section-header">Top Picks</h1>
+      <div class="best-buy__flex-wrapper row">
+        <div class="col-md-3 best-buy__flex-item" *ngFor="let product of bestBuys" [routerLink]="'/products'" [@EnterLeave]>
+          <img class="best-buy__flex-item-img" src={{product}} alt={{product}}/>
+        </div>
+      </div>
+    </section>
 </main>

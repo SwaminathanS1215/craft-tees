@@ -1,90 +1,91 @@
 #app-navbar {
-    padding: 0.5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
-    background: #0f171b;
-    height: 4rem;
+  padding: 0.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  background: #0f171b;
+  height: 4rem;
 }
 
 .navbar-brand {
-    padding: 0;
-    font-size: 1.3rem;
-    font-weight: bold;
-    border-bottom: 3px solid #ffc107;
-    background: linear-gradient(to right, #ffeb3b 0%, #00bcd4 100%);
-    background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 3px solid #ffc107;
+  background: linear-gradient(to right, #ffeb3b 0%, #00bcd4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #nav-elements, #nav-actions {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 #search-box .form-control {
-    background: transparent;
-    color: white;
-    width: 20rem;
+  background: transparent;
+  color: white;
+  width: 20rem;
 }
 
 #nav-elements {
-    width: 100%;
-    justify-content: space-between;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .nav-action-item {
-    margin-left: 2rem;
-    cursor: pointer;
+  margin-left: 2rem;
+  cursor: pointer;
 }
 
-.nav-action-item .text{
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #1d86d9;
+.nav-action-item .text {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1d86d9;
 }
-.nav-action-item .text:hover{
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-    background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+
+.nav-action-item .text:hover {
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main {
-    height: calc(100% - 4rem);
-    margin-top: 4rem;
+  height: calc(100% - 4rem);
+  margin-top: 4rem;
 }
 
 input:focus, button:focus, .btn:focus {
-    outline: none !important;
-    box-shadow: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 
 }
 
 .home-page-container .carousel-control-prev-icon {
-    background-color: black !important;
-    height: 5rem !important;
+  background-color: black !important;
+  height: 5rem !important;
 }
 
 .home-page-container .carousel-control-next-icon {
-    background-color: black !important;
-    height: 5rem !important;
+  background-color: black !important;
+  height: 5rem !important;
 }
 
 #app-footer {
-    background: black;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
+  background: black;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 }
